@@ -28,6 +28,11 @@ function refreshPage() {
 }
 
 function showNotification() {
-    alert('Paid successfully');
-    window.location.reload();
+    const billTotalInput = document.getElementById('billTotal');
+    if (billTotalInput.value === '') {
+        alert('Please enter bill Total');
+    } else {
+        alert('Paid successfully');
+        window.location.reload();
+    }
 }
