@@ -127,3 +127,23 @@ button#payNowButton:hover {
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
