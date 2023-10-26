@@ -4,22 +4,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const tipPercentageInput = document.getElementById('tipPercentage');
     const tipAmountInput = document.getElementById('tipAmount');
     const totalBillWithTipInput = document.getElementById('totalBillWithTip');
+    const rangeSlider = document.getElementById('tip');
 
     const form = document.getElementById('tipForm');
 
     form.addEventListener('input', function() {
         let bill = parseFloat(billTotalInput.value);
         let tipPercentage = tipInput.value;
-        
+
         if (isNaN(bill)) {
             alert('Please enter a valid number for the bill total.');
             return;
         }
-        
+
         tipPercentageInput.value = tipPercentage;
         let tipAmount = (bill * tipPercentage) / 100;
         tipAmountInput.value = tipAmount.toFixed(2);
         totalBillWithTipInput.value = (bill + tipAmount).toFixed(2);
+
+        if (tipPercentage < 15) {
+            rangeSlider.style.background = 'red';
+        } else {
+            rangeSlider.style.background = 'green';
+        }
     });
 });
 
@@ -28,6 +35,10 @@ function refreshPage() {
 }
 
 function showNotification() {
-    alert('Paid successfully');
-    window.location.reload();
+    const billTotalInput = document.getElementById('billTotal');
+    if (billTotalInput.value === '' || billTotalInput.value === null) {
+        alert('Please enter the bill total.');
+    } else {
+        alert('Paid successfully');
+    }
 }
