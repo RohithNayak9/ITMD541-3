@@ -28,11 +28,14 @@ function refreshPage() {
 }
 
 function showNotification() {
+    function showNotification() {
     const billTotalInput = document.getElementById('billTotal');
-    if (billTotalInput.value === '') {
-        alert('Please enter bill Total');
+    if (billTotalInput.value === '' || billTotalInput.value === null) {
+        alert('Please enter the bill total.');
     } else {
         alert('Paid successfully');
-        window.location.reload();
+    }
+}
+
     }
 }
