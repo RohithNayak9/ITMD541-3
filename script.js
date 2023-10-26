@@ -36,6 +36,4 @@ function showNotification() {
         alert('Paid successfully');
     }
 }
-
-    }
 }
