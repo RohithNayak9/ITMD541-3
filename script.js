@@ -40,5 +40,6 @@ function showNotification() {
         alert('Please enter the bill total.');
     } else {
         alert('Paid successfully');
+        window.location.reload();
     }
 }
