@@ -130,7 +130,7 @@ button#payNowButton:hover {
 
 @media only screen and (max-width: 800px) {
     .container {
-        width: 80%;
+        width: 100%;
     }
 
     form {
@@ -138,12 +138,12 @@ button#payNowButton:hover {
     }
 
     button {
-        width: 100%;
+        width: 75%;
         margin-left: 0;
     }
 
     .button-container {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 }
