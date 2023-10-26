@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TIP Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h4>ITMD 2/541 - Lab 3 - Rohith Mohandas Nayak</h4>
+        <h1>Tip Calculator</h1>
+        
+        <form id="tipForm">
+            <div class="input-group">
+                <label for="billTotal">Bill Total:</label>
+                <input type="text" id="billTotal" required>
+            </div>
+
+            <div class="input-group">
+                <label for="tip">Tip:</label>
+                <input type="range" id="tip" min="0" max="100" value="25">
+            </div>
+
+            <div class="input-group">
+                <label for="tipPercentage">Tip Percentage:</label>
+                <input type="text" id="tipPercentage" disabled>
+            </div>
+
+            <div class="input-group">
+                <label for="tipAmount">Tip Amount:</label>
+                <input type="text" id="tipAmount" disabled>
+            </div>
+
+            <div class="input-group">
+                <label for="totalBillWithTip">Total Bill with Tip:</label>
+                <input type="text" id="totalBillWithTip" disabled>
+            </div>
+        </form>
+        <button onclick="refreshPage()">Refresh</button>
+        <button onclick="showNotification()">Pay Now</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
